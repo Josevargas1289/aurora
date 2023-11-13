@@ -41,16 +41,27 @@ const useStyles = makeStyles({ uniqId: 'about' })((theme) => ({
       background: '#dedede'
     },
     '& span': {
-      background: `url(${imgApi.agency[1]}) no-repeat fixed`,
+      background: `url(${imgApi.agency[0]}) no-repeat fixed`,
       backgroundSize: 'auto 800px',
       transform: 'rotate(-45deg)',
-      width: 560,
+      width: 595,
       height: 1000,
       display: 'block',
       position: 'relative',
-      top: -110,
-      left: 0,
-    }
+      top: -380,
+      left: -290,
+    },
+    '& strong': {
+      background: `url(${imgApi.agency[1]}) no-repeat fixed`,
+      backgroundSize: 'auto 800px',
+      transform: 'rotate(-45deg)',
+      width: 1000,
+      height: 1000,
+      display: 'block',
+      position: 'relative',
+      top: -220,
+      left: -500,
+    },
   },
   pieceBig: {
     width: 300,
@@ -59,6 +70,7 @@ const useStyles = makeStyles({ uniqId: 'about' })((theme) => ({
     left: 100,
     borderRadius: 32,
   },
+
   pieceSmallTop: {
     width: 100,
     height: 100,

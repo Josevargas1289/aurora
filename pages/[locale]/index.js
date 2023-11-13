@@ -15,11 +15,11 @@ import VideoBanner from '~/components/VideoBanner';
 import SquareParallax from '~/components/Parallax/Square';
 import About from '~/components/About';
 import Services from '~/components/Services';
-import Testimonials from '~/components/Testimonials';
+// import Testimonials from '~/components/Testimonials';
 import Expertise from '~/components/Expertise';
 import CaseStudies from '~/components/CaseStudies';
-import CallAction from '~/components/CallAction';
-import MapAddress from '~/components/MapAddress';
+// import CallAction from '~/components/CallAction';
+// import MapAddress from '~/components/MapAddress';
 import Footer from '~/components/Footer';
 import PageNav from '~/components/PageNav';
 import Notification from '~/components/Notification';
@@ -107,12 +107,12 @@ function Landing(props) {
           <section id="case-studies">
             <CaseStudies />
           </section>
-          <section className={classes.spaceTopShort} id="call-to-action">
+          {/* <section className={classes.spaceTopShort} id="call-to-action">
             <CallAction />
-          </section>
-          <section className={classes.spaceTopShort} id="address">
+          </section> */}
+          {/* <section className={classes.spaceTopShort} id="address">
             <MapAddress />
-          </section>
+          </section> */}
         </main>
         {!isTablet && (
           <PageNav />

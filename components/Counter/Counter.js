@@ -5,6 +5,7 @@ import Container from '@mui/material/Container';
 import { useTranslation } from 'next-i18next';
 import { useText } from '~/theme/common';
 import useStyles from './counter-style';
+import { GlobalOutlined, UsbOutlined, MobileOutlined  } from '@ant-design/icons';
 
 function Counter() {
   const { t } = useTranslation('common');
@@ -18,7 +19,7 @@ function Counter() {
             <div className={classes.counterItem}>
               <div className={classes.text}>
                 <Typography variant="h3" className={text.title}>
-                  +200
+                  <GlobalOutlined />
                 </Typography>
                 <Typography component="p" className={text.subtitle}>
                   {t('agency-landing.about_employee')}
@@ -30,7 +31,7 @@ function Counter() {
             <div className={classes.counterItem}>
               <div className={classes.text}>
                 <Typography variant="h3" className={text.title}>
-                  +500
+                  <MobileOutlined />
                 </Typography>
                 <Typography component="p" className={text.subtitle}>
                   {t('agency-landing.about_projects')}
@@ -42,7 +43,7 @@ function Counter() {
             <div className={classes.counterItem}>
               <div className={classes.text}>
                 <Typography variant="h3" className={text.title}>
-                  +300
+                  <UsbOutlined />
                 </Typography>
                 <Typography component="p" className={text.subtitle}>
                   {t('agency-landing.about_client')}

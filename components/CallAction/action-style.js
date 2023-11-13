@@ -4,6 +4,7 @@ import { lighten, darken } from '@mui/material/styles';
 const useStyles = makeStyles({ uniqId: 'cta' })((theme) => ({
   root: {
     position: 'relative',
+    zIndex: 100
   },
   background: {
     fill: theme.palette.mode === 'dark' ? darken(theme.palette.primary.light, 0.8) : lighten(theme.palette.primary.light, 0.8),

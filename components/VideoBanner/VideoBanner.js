@@ -105,7 +105,7 @@ function VideoBanner() {
               <Typography className={cx(classes.subtitle, text.subtitle)} variant="h5">
                 {t('agency-landing.banner_subtitle')}
               </Typography>
-              <Button variant="outlined" size="large" color="secondary" className={classes.button}>
+              <Button href="/contact" variant="outlined" size="large" color="secondary" className={classes.button}>
                 {t('agency-landing.banner_button')}
                 <SendIcon className={classes.icon} />
               </Button>

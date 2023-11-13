@@ -15,30 +15,30 @@ import DotsParallax from '../Parallax/Dots';
 
 const servicesList = [
   {
-    title: 'Lorem Ipsum',
-    desc: 'Proin ac arcu nisl. Duis eu molestie lectus. Nam quis mauris faucibus, aliquet elit eu, rhoncus ipsum.',
+    title: 'Desarrollo de Software Personalizado',
+    desc: 'Expertos en crear soluciones a medida para satisfacer tus necesidades.',
     img: imgApi.agency[2]
   }, {
-    title: 'Etiam rhoncus',
-    desc: 'Proin quis pellentesque dui. Ut sed leo neque. Nullam aliquet iaculis neque a commodo.',
+    title: 'Consultoría en Tecnología Innovadora',
+    desc: 'Ofrecemos asesoramiento estratégico para aprovechar al máximo la tecnología en tu empresa.',
     img: imgApi.agency[3]
   }, {
-    title: 'Duis fermentum',
-    desc: 'Quisque consectetur lectus vel orci porttitor gravida ac eu erat. Nullam accumsan nibh tortor.',
+    title: 'Aplicaciones Móviles Intuitivas',
+    desc: 'Diseñamos y desarrollamos aplicaciones móviles que ofrecen una experiencia de usuario excepcional.',
     img: imgApi.agency[4]
   },
   {
-    title: 'Lorem Ipsum',
-    desc: 'Proin ac arcu nisl. Duis eu molestie lectus. Nam quis mauris faucibus, aliquet elit eu, rhoncus ipsum.',
-    img: imgApi.agency[2]
+    title: 'Garantía de Calidad (QA) en el Desarrollo',
+    desc: 'Nos especializamos en asegurar la calidad de tu software.',
+    img: imgApi.agency[5]
   }, {
-    title: 'Etiam rhoncus',
-    desc: 'Proin quis pellentesque dui. Ut sed leo neque. Nullam aliquet iaculis neque a commodo.',
-    img: imgApi.agency[3]
+    title: 'Branding Impactante',
+    desc: 'Crea una identidad sólida y memorable con nuestro servicio de branding.',
+    img: imgApi.agency[6]
   }, {
-    title: 'Duis fermentum',
-    desc: 'Quisque consectetur lectus vel orci porttitor gravida ac eu erat. Nullam accumsan nibh tortor.',
-    img: imgApi.agency[4]
+    title: 'Diseño UI/UX Innovador',
+    desc: 'Transformamos ideas en experiencias visuales excepcionales.',
+    img: imgApi.agency[7]
   }
 ];
 
@@ -101,7 +101,6 @@ function Services() {
                   title={item.title}
                   desc={item.desc}
                   img={item.img}
-                  button={t('agency-landing.services_button')}
                 />
               </div>
             ))}

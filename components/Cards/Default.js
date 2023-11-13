@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import useStyles from './cards-style';
 
@@ -11,7 +10,6 @@ function Services(props) {
     img,
     title,
     desc,
-    button
   } = props;
   return (
     <Paper className={classes.defaultCard}>
@@ -22,9 +20,6 @@ function Services(props) {
         <Typography display="block" variant="h6">{title}</Typography>
         <Typography component="p">{desc}</Typography>
       </div>
-      <Button variant="outlined" fullWidth color="primary" className={classes.button}>
-        {button}
-      </Button>
     </Paper>
   );
 }
@@ -33,7 +28,6 @@ Services.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  button: PropTypes.string.isRequired,
 };
 
 export default Services;

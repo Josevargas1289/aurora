@@ -95,7 +95,7 @@ const useStyles = makeStyles({ uniqId: 'expertise' })((theme, _params, classes) 
   runningTag: {
     position: 'relative',
     height: 130,
-    padding: theme.spacing(0, 4),
+    padding: theme.spacing(8, 4),
     '& div[class*="slick-active"]': {
       [`& .${classes.tagItem}`]: {
         background: theme.palette.primary.main,

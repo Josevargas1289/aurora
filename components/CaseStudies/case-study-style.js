@@ -31,7 +31,7 @@ const useStyles = makeStyles({ uniqId: 'case' })((theme) => ({
   },
   massonry: {
     '& button': {
-      width: '100%'
+      width: '100%',
     }
   },
 }));

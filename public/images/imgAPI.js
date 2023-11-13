@@ -10,7 +10,9 @@ const imgAPI = {
     '/images/avatars/pp_boy2.svg',
     '/images/avatars/pp_boy3.svg',
     '/images/avatars/pp_boy4.svg',
-    '/images/avatars/pp_boy5.svg'
+    '/images/avatars/pp_boy5.svg',
+    '/images/avatars/img-about1.png'
+
   ],
   photo: [
     'https://via.placeholder.com/675x900/e1ad92/ffffff',
@@ -29,17 +31,18 @@ const imgAPI = {
     'https://via.placeholder.com/640x425/c4cdff/757575',
   ],
   agency: [
-    'https://via.placeholder.com/964x723/1071ef/FFFFFF',
-    'https://via.placeholder.com/1280x825/99d8ff/FFFFFF',
-    'https://via.placeholder.com/490x327/ffc999/FFFFFF',
-    'https://via.placeholder.com/490x327/ffc999/FFFFFF',
-    'https://via.placeholder.com/490x327/ffc999/FFFFFF',
-    'https://via.placeholder.com/331x690/fdcc0c/FFFFFF',
-    'https://via.placeholder.com/521x309/4a0cfd/FFFFFF',
-    'https://via.placeholder.com/521x309/ffe55b/FFFFFF',
+    '/images/agency/img-about1.png',
+    '/images/agency/img-about-2.png',
+    '/images/agency/software.png',
+    '/images/agency/consultoria.png',
+    '/images/agency/movil.png',
+    '/images/agency/testing.png',
+    '/images/agency/branding.png',
+    '/images/agency/diseño.png',
     'https://via.placeholder.com/713x309/79c0ff/FFFFFF',
     'https://via.placeholder.com/711x693/52596b/FFFFFF',
   ],
+
 };
 
 export default imgAPI;

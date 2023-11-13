@@ -4,9 +4,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import ScrollAnimation from 'react-scroll-animation-wrapper';
-// import List from '@mui/material/List';
-// import ListItem from '@mui/material/ListItem';
-// import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'next-i18next';
@@ -15,23 +12,7 @@ import CaseCard from '../Cards/Case';
 import useStyles from './case-study-style';
 import useTitle from '../Title/title-style';
 
-// const categories = ['Desarrollo de software', 'infraestructura tecnologíca', 'Soporte', 'Desarrollo Movíl', 'Branding y Rebranding'];
 const caseData = [
-  {
-    bg: imgApi.agency[5],
-    logo: '/images/logos/profile.png',
-    title: 'Desarrollo Movíl',
-    desc: 'Apps para IOS y Android',
-    size: 'medium',
-  },
-  // {
-  //   logo: '/images/logos/coin.png',
-  //   title: 'Donec commodo convallis ligula',
-  //   desc: 'Vestibulum consequat hendrerit',
-  //   size: 'small',
-  //   simple: true,
-  // },
-
   {
     bg: imgApi.agency[6],
     logo: '/images/logos/profile.png',
@@ -39,25 +20,11 @@ const caseData = [
     desc: 'Todo en productos tecnologícos',
     size: 'medium',
   },
-  // {
-  //   bg: imgApi.agency[7],
-  //   logo: '/images/logos/profile.png',
-  //   title: 'Soporte',
-  //   desc: 'especialistas en soporte y mantenimiento tecnologíco',
-  //   size: 'medium',
-  // },
-  {
-    bg: imgApi.agency[8],
-    logo: '/images/logos/profile.png',
-    title: 'Branding y Rebranding',
-    desc: 'Expertos en creacion de piezas que comunican, ¡Renueva tu marca!',
-    size: 'big',
-  },
   {
     bg: imgApi.agency[9],
     logo: '/images/logos/profile.png',
-    title: 'Desarrollo de software',
-    desc: 'Soluciones a la medida',
+    title: 'Producto propio',
+    desc: 'lataforma de gestion educativa Aurora365',
     size: 'big',
   },
 ];
@@ -135,18 +102,6 @@ function CaseStudies() {
                 <Typography variant="h4" className={title.primary}>
                   {t('agency-landing.case_title')}
                 </Typography>
-                {/* <List component="nav">
-                  {categories.map((item, index) => (
-                    <ListItem
-                      button
-                      key={index.toString()}
-                      className={cx(classes.filter, selectedIndex === item && classes.active)}
-                      onClick={event => handleListItemClick(event, item)}
-                    >
-                      <ListItemText primary={item} />
-                    </ListItem>
-                  ))}
-                </List> */}
               </div>
             </ScrollAnimation>
           </Grid>

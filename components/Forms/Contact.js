@@ -12,7 +12,7 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { useTranslation } from 'next-i18next';
 import routeLink from '~/public/text/link';
 import { useText } from '~/theme/common';
-import logo from '~public/images/agency-logo.svg';
+import logo from '~public/images/agency-logo.png';
 import Checkbox from './Checkbox';
 import useStyles from './form-style';
 
@@ -107,7 +107,7 @@ function Contact() {
                   name="Name"
                   value={values.name}
                   validators={['required']}
-                  errorMessages={['This field is required']}
+                  errorMessages={['Este campo es requerido']}
                 />
               </Grid>
               <Grid item sm={6} xs={12}>
@@ -119,7 +119,7 @@ function Contact() {
                   name="Email"
                   value={values.email}
                   validators={['required', 'isEmail']}
-                  errorMessages={['This field is required', 'email is not valid']}
+                  errorMessages={['este campo es requerido', 'email no valido']}
                 />
               </Grid>
               <Grid item sm={6} xs={12}>
@@ -160,7 +160,7 @@ function Contact() {
                 control={(
                   <Checkbox
                     validators={['isTruthy']}
-                    errorMessages="This field is required"
+                    errorMessages="Este campo es requerido"
                     checked={check}
                     value={check}
                     onChange={(e) => handleCheck(e)}
