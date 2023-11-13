@@ -14,17 +14,17 @@ import useTitle from '../Title/title-style';
 
 const caseData = [
   {
-    bg: imgApi.agency[6],
+    bg: imgApi.logos[0],
     logo: '/images/logos/profile.png',
     title: 'Infraestructura tecnologica',
     desc: 'Todo en productos tecnologícos',
     size: 'medium',
   },
   {
-    bg: imgApi.agency[9],
+    bg: imgApi.logos[1],
     logo: '/images/logos/profile.png',
     title: 'Producto propio',
-    desc: 'lataforma de gestion educativa Aurora365',
+    desc: 'Plataforma de gestion educativa Aurora365',
     size: 'big',
   },
 ];

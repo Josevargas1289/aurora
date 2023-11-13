@@ -19,16 +19,18 @@
   "accept": "Aceptar",
   "en": "English",
   "es": "Español",
-  "notif_msg": "Este é um exemplo de mensagem comumente usada para informações importantes para visitantes ou usuários. Clique no botão ao lado para fechar esta mensagem.",
+  "notif_msg": "Este sitio web utiliza cookies para mejorar la experiencia del usuario y proporcionar funciones adicionales. Al continuar navegando por este sitio, aceptas nuestro uso de cookies",
   "agency-landing": {
     "header_about": "Nosotros",
     "header_services": "Servicios",
     "header_our-expertise": "Clientes",
-    "header_testimonials": "Producto",
-    "header_contact": "Contato",
-    "header_language": "língua",
-    "header_theme": "modo de tema",
-    "header_dark": "escuro",
+    "header_testimonials": "Productos",
+    "header_case-studies": "Productos",
+    "header_our_office": "Productos",
+    "header_contact": "Contacto",
+    "header_language": "Lenguaje",
+    "header_theme": "Tema",
+    "header_dark": "Oscuro",
     "header_light": "luz",
     "banner_title": "¡Bienvenido! Aurora365",
     "banner_subtitle": "Transformamos tus ideas en soluciones tecnológicas innovadoras.",
@@ -52,6 +54,6 @@
     "office_title": "Nosso escritório",
     "office_head": "Quartel-general",
     "office_branch": "Filial",
-    "footer_paragraph": "Estamos no mercado há quase uma década. Ajudá-lo é a nossa principal prioridade."
+    "footer_paragraph": "Llevamos varios años en la industria, construyendo relaciones sólidas y ofreciendo soluciones confiables."
   }
 }

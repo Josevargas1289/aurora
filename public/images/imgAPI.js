@@ -42,6 +42,10 @@ const imgAPI = {
     'https://via.placeholder.com/713x309/79c0ff/FFFFFF',
     'https://via.placeholder.com/711x693/52596b/FFFFFF',
   ],
+  logos: [
+    '/images/logos/infraestructura.png',
+    '/images/logos/productopropio.png',
+  ]
 
 };
 

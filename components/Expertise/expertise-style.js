@@ -17,7 +17,7 @@ const useStyles = makeStyles({ uniqId: 'expertise' })((theme, _params, classes) 
     },
     '& .MuiContainer-root': {
       [theme.breakpoints.up('sm')]: {
-        padding: 0
+        padding: 0,
       }
     }
   },
@@ -47,7 +47,7 @@ const useStyles = makeStyles({ uniqId: 'expertise' })((theme, _params, classes) 
     backgroundSize: '100%'
   },
   titleDeco: {
-    position: 'relative'
+    position: 'relative',
   },
   desc: {
     lineHeight: '32px',

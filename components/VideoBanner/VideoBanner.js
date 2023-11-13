@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import PlayIcon from '@mui/icons-material/PlayArrow';
-import PauseIcon from '@mui/icons-material/Pause';
-import SendIcon from '@mui/icons-material/Send';
-import YouTube from 'react-youtube';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import { useTranslation } from 'next-i18next';
-import { useText } from '~/theme/common';
-import imgApi from '~/public/images/imgAPI';
-import yt from '~/youtube';
-import useStyles from './banner-style';
+import React, { useState, useEffect } from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import PlayIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from "@mui/icons-material/Pause";
+import SendIcon from "@mui/icons-material/Send";
+import YouTube from "react-youtube";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import { useTranslation } from "next-i18next";
+import { useText } from "~/theme/common";
+import imgApi from "~/public/images/imgAPI";
+import yt from "~/youtube";
+import useStyles from "./banner-style";
 
 function VideoBanner() {
   // Theme breakpoints
   const theme = useTheme();
   const { classes: text } = useText();
-  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
-  const isTablet = useMediaQuery(theme.breakpoints.up('sm'));
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const isTablet = useMediaQuery(theme.breakpoints.up("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   // Translation function
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
 
   // Youtube player
   const [play, setPlayed] = useState(false);
@@ -36,18 +36,18 @@ function VideoBanner() {
   useEffect(() => {
     if (isDesktop) {
       /* Attention
-      ** HandleScroll function to optimize site with video background may give an error log
-      ** Uncaught TypeError: Cannot read property 'src' of null
-      ** It's because HMR in development mode, and react-youtube need to refresh.
-      ** The error log will not happen in production mode or just reload browser (development mode)
-      ** You can uncomment _onPlay() function, if you don't want see error browser log.
-      ** But then every changes you make, the browser will auto reload.
-      */
+       ** HandleScroll function to optimize site with video background may give an error log
+       ** Uncaught TypeError: Cannot read property 'src' of null
+       ** It's because HMR in development mode, and react-youtube need to refresh.
+       ** The error log will not happen in production mode or just reload browser (development mode)
+       ** You can uncomment _onPlay() function, if you don't want see error browser log.
+       ** But then every changes you make, the browser will auto reload.
+       */
       // _onPlay();
     }
   }, []);
 
-  const _onEnd = event => {
+  const _onEnd = (event) => {
     event.target.playVideo();
   };
 
@@ -59,7 +59,7 @@ function VideoBanner() {
     }
   };
 
-  const _onReady = event => {
+  const _onReady = (event) => {
     player.push(event.target);
     setPlayer(player);
   };
@@ -74,16 +74,17 @@ function VideoBanner() {
   };
 
   const opts = {
-    height: '720',
-    width: '1080',
-    playerVars: { // https://developers.google.com/youtube/player_parameters
+    height: "720",
+    width: "1080",
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
       controls: 0,
       rel: 0,
       showinfo: 0,
       mute: 1,
-      origin: 'http://localhost:3001'
-    }
+      origin: "http://localhost:3001",
+    },
   };
 
   return (
@@ -98,15 +99,27 @@ function VideoBanner() {
           <Grid item md={6} xs={12}>
             <div className={classes.bannerText}>
               <div className={classes.title}>
-                <Typography variant="h3" className={cx(classes.textHelper, text.title)}>
-                  {t('agency-landing.banner_title')}
+                <Typography
+                  variant="h3"
+                  className={cx(classes.textHelper, text.title)}
+                >
+                  {t("agency-landing.banner_title")}
                 </Typography>
               </div>
-              <Typography className={cx(classes.subtitle, text.subtitle)} variant="h5">
-                {t('agency-landing.banner_subtitle')}
+              <Typography
+                className={cx(classes.subtitle, text.subtitle)}
+                variant="h5"
+              >
+                {t("agency-landing.banner_subtitle")}
               </Typography>
-              <Button href="/contact" variant="outlined" size="large" color="secondary" className={classes.button}>
-                {t('agency-landing.banner_button')}
+              <Button
+                href="/contact"
+                variant="outlined"
+                size="large"
+                color="secondary"
+                className={classes.button}
+              >
+                {t("agency-landing.banner_button")}
                 <SendIcon className={classes.icon} />
               </Button>
             </div>
@@ -117,11 +130,17 @@ function VideoBanner() {
                 <div className={classes.videoFigure}>
                   <div className={classes.innerFigure}>
                     {isDesktop && (
-                      <IconButton className={classes.btnPlay} onClick={_onTogglePause} size="large">
+                      <IconButton
+                        className={classes.btnPlay}
+                        onClick={_onTogglePause}
+                        size="large"
+                      >
                         {playCtrl ? <PauseIcon /> : <PlayIcon />}
                       </IconButton>
                     )}
-                    {!play || isMobile ? <img src={imgApi.agency[0]} alt="cover" /> : null}
+                    {!play || isMobile ? (
+                      <img src={imgApi.agency[1]} alt="cover" />
+                    ) : null}
                     <div className={classes.overlay} />
                     {yt.use && (
                       <div className={classes.video}>

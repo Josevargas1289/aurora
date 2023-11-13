@@ -113,13 +113,20 @@ function Expertise() {
               <Typography className={cx(classes.desc, text.paragraph)}>
                 {t("agency-landing.expertise_paragraph")}
               </Typography>
-              {!isTablet && (
-                <div className={classes.runningTag}>
-                  <img src={sonoco} alt="" style={{ width: 100 }} />
-                  <img src={megadev} alt="" style={{ width: 100 }} />
-                  <img src={forestaling} alt="" style={{ width: 100 }} />
-                </div>
-              )}
+
+              <div className={classes.runningTag}>
+                <img
+                  src={sonoco}
+                  alt=""
+                  style={{ width: 100, marginRight: "2rem" }}
+                />
+                <img src={megadev} alt="" style={{ width: 100 }} />
+                <img
+                  src={forestaling}
+                  alt=""
+                  style={{ width: 100, marginLeft: "2rem", marginTop: "2rem" }}
+                />
+              </div>
             </Grid>
           </Grid>
         </Container>

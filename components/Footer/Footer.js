@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'next-i18next';
-import logo from '~/public/images/agency-logo.svg';
+import logo from '~/public/images/agency-logo.png';
 import brand from '~/public/text/brand';
 import { useTextAlign } from '~/theme/common';
 import useStyles from './footer-style';
@@ -29,21 +29,13 @@ function Copyright() {
 }
 
 const footers = [
+
   {
-    title: 'Company',
-    description: ['Team', 'History', 'Contact us', 'Locations'],
-    link: ['#team', '#history', '#contact-us', '#locations'],
-  },
-  {
-    title: 'Resources',
-    description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
+    title: 'Contacto',
+    description: ['Santiago de cali', 'gerencia@365aurora.com', '3157706045'],
     link: ['#resource', '#resource-name', '#another-resource', '#final-resource'],
   },
-  {
-    title: 'Legal',
-    description: ['Privacy policy', 'Terms of use'],
-    link: ['#privacy-policy', '#terms-of-use'],
-  },
+
 ];
 
 function Footer(props) {
