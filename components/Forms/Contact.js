@@ -15,13 +15,14 @@ import { useText } from '~/theme/common';
 import logo from '~public/images/agency-logo.png';
 import Checkbox from './Checkbox';
 import useStyles from './form-style';
+import emailjs from 'emailjs-com';
 
 function Contact() {
   const { t, i18n } = useTranslation('common');
   const { classes, cx } = useStyles();
   const { classes: text } = useText();
-  const isDesktop = useMediaQuery(theme => theme.breakpoints.up('md'));
-  const isTablet = useMediaQuery(theme => theme.breakpoints.down('md'));
+  const isDesktop = useMediaQuery((theme) => theme.breakpoints.up('md'));
+  const isTablet = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
   const curLang = '/' + i18n.language;
 
@@ -30,27 +31,53 @@ function Contact() {
     email: '',
     phone: '',
     company: '',
-    message: ''
+    message: '',
   });
 
   useEffect(() => {
-    ValidatorForm.addValidationRule('isTruthy', value => value);
-  });
+    ValidatorForm.addValidationRule('isTruthy', (value) => value);
+  }, []);
 
   const [openNotif, setNotif] = useState(false);
-
   const [check, setCheck] = useState(false);
 
-  const handleChange = name => event => {
+  const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value });
   };
 
-  const handleCheck = event => {
+  const handleCheck = (event) => {
     setCheck(event.target.checked);
   };
 
   const handleSubmit = () => {
-    setNotif(true);
+    const templateParams = {
+      to_name: 'Aurora365',
+      from_name: values.name,
+      from_email: values.email,
+      from_phone: values.phone,
+      message_html: values.message,
+    };
+
+    const emailJsParams = {
+      serviceId: 'service_6n1aa6r',
+      templateId: 'template_4ja2lvv',
+      userId: '62hpVGAEFYawW-TMh',
+    };
+
+    emailjs
+      .send(
+        emailJsParams.serviceId,
+        emailJsParams.templateId,
+        templateParams,
+        emailJsParams.userId
+      )
+      .then((response) => {
+        console.log('Correo enviado con éxito:', response);
+        setNotif(true);
+      })
+      .catch((error) => {
+        console.error('Error al enviar el correo:', error);
+      });
   };
 
   const handleClose = () => {
@@ -95,7 +122,7 @@ function Contact() {
         <div className={classes.form}>
           <ValidatorForm
             onSubmit={handleSubmit}
-            onError={errors => console.log(errors)}
+            onError={(errors) => console.log(errors)}
           >
             <Grid container spacing={6}>
               <Grid item sm={6} xs={12}>

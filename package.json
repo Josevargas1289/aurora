@@ -35,6 +35,7 @@
 		"babel-plugin-root-import": "^6.4.1",
 		"cross-env": "^7.0.3",
 		"dandelion-animated-slider": "^1.0.0",
+		"emailjs-com": "^3.2.0",
 		"google-maps-react18": "^2.0.9",
 		"i18next": "^22.4.6",
 		"loader-utils": "^3.2.1",
